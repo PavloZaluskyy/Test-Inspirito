@@ -1,0 +1,39 @@
+h1{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px; 
+}
+input,  select{
+	margin-top: 15px;
+	margin-bottom: 15px; 
+}
+
+.required{
+	color: red;
+}
+
+.sent{
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+.sent span{
+	padding: 15px 30px;
+	background: #73C6EA;
+	border-radius: 30px;
+
+}
+
+.button_container{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	justify-content: space-around;
+}
+.send, .cancel{
+	width: 300px;
+	margin: 15px 0;
+	padding: 10px 20px;
+}

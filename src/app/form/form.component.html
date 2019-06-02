@@ -1,0 +1,73 @@
+<div class="container">
+	<h1>Problem 4</h1>
+	<!--<form [formGroup]="myForm" novalidate>-->
+		<div>
+			<span for="InputName">Name <span class="required">*</span></span>
+			<!--<input id="InputName"  formControlName="userName"   minlength="1" maxlength="100" class="form-control"  type="text" placeholder="Enter Name">-->
+			<input id="InputName"  [(ngModel)]="userName"   minlength="1" maxlength="100" class="form-control"  type="text" placeholder="Enter Name">
+			<!--<div class="alert alert-danger"
+        		*ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
+                            Invalid Name entered.
+        	</div>-->
+        	<div class="alert alert-danger"
+        		*ngIf="errorName">
+                            Invalid Name entered.
+        	</div>
+        </div>
+		<div>
+			<span for="InputAdress1">Address 1 <span class="required">*</span></span>
+			<!--<input id="InputAdress1" minlength="1"  formControlName="userAddress1"  maxlength="100" class="form-control"  type="text" placeholder="Enter Address 1">-->
+			<input id="InputAdress1" minlength="1"  [(ngModel)]="userAddress1"  maxlength="100" class="form-control"  type="text" placeholder="Enter Address 1">
+			<!--<div class="alert alert-danger"
+                 *ngIf="myForm.controls['userAddress1'].invalid && myForm.controls['userAddress1'].touched">
+                            Invalid Address entered.
+            </div>-->
+            <div class="alert alert-danger"
+                 *ngIf="errorAddress">
+                            Invalid Address entered.
+            </div>
+		</div>
+		<div>
+			<span for="InputAdress2">Address 2 </span>
+			<input id="InputAdress2" minlength="0"  maxlength="100" class="form-control"  type="text" [(ngModel)]="userAddress2" placeholder="Enter Address 2">
+		</div>
+		<div>
+			<span for="InputCity">City <span class="required">*</span></span>
+			<!--<input id="InputCity" minlength="1" formControlName="userCity" maxlength="50" class="form-control"  type="text" placeholder="Enter City">-->
+			<input id="InputCity" minlength="1" [(ngModel)]="userCity" maxlength="50" class="form-control"  type="text" placeholder="Enter City">
+			<!--<div class="alert alert-danger"
+                 *ngIf="myForm.controls['userCity'].invalid && myForm.controls['userCity'].touched">
+                            Incorrect Сity entered.
+            </div>-->
+            <div class="alert alert-danger"
+                *ngIf="errorCity" >
+                            Incorrect Сity entered.
+            </div>
+		</div>
+		<div>
+			<span for="InputAdress1">Select Stare <span class="required">*</span></span>
+			<select class="form-control" [(ngModel)]="userStare" id="exampleFormControlSelect1">
+		      <option >Ukraine</option>
+		      <option>UK</option>
+		    </select>
+		</div>
+		<div>
+	   		<span for="InputZipCode">Zip Code <span class="required">*</span></span>
+			<!--<input id="InputZipCode" minlength="5" maxlength="5" class="form-control" formControlName="userZipCode" type="tel" placeholder="Enter Zip Code">-->
+			<input id="InputZipCode" minlength="5" maxlength="5" class="form-control" [(ngModel)]="userZipCode" type="tel" placeholder="Enter Zip Code">
+			<!--<div class="alert alert-danger"
+                 *ngIf="myForm.controls['userZipCode'].invalid && myForm.controls['userZipCode'].touched">
+                            Incorrect Zip Code entered
+            </div>-->
+            <div class="alert alert-danger"
+                 *ngIf="errorZipCode">
+                            Incorrect Zip Code entered
+            </div>
+		</div>
+		<div *ngIf="doneSent" class="sent">
+			<span>Thank you data sent</span>
+		</div>
+		<div class="button_container">
+			<button (click)="validationSent()"  class="send btn btn-primary">OK</button>
+			<button (click)="cancel()" class="cancel btn btn-danger">Cancel</button>
+		</div>

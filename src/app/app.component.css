@@ -1,0 +1,36 @@
+a{
+	text-decoration: none;
+	transition: all.6s ease; 
+    -ms-transition: all.6s ease;
+ 	-o-transition: all.6s ease;
+ 	-webkit-transition: all.6s ease;
+ 	-moz-transition: all.6s ease;
+	font-size: 1.4rem;
+    color: #fff;
+}
+
+ul li{
+	display: inline;
+}
+nav{
+	width: 100%;
+	background: #EE6E73;
+}
+.wrapper{
+	
+	
+}
+.menu{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.menu li{
+	//height: 100%;
+	padding: 35px 15px;
+	cursor: pointer;
+}
+.menu li:hover{
+	background: #EA454B;
+}
