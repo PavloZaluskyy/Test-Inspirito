@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 import { DataInterface } from './data-interface';
-//import { from } from 'rxjs';
-/*import { HttpClient } from '@angular/common/http';
-import { HttpErrorResponse } from '@angular/common/http';
-*/
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
